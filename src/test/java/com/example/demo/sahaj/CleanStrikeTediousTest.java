@@ -4,16 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class CleanStrikeTest {
+public class CleanStrikeTediousTest {
 	
 	@Test
 	public void testInputIsValidOrNot() {
 		
-		assertEquals(true, CleanStrike.validateOption(6));
+		assertEquals(true, CleanStrikeTedious.validateOption(6));
 	}
 	
 	@Test
 	public void testGameHasEndedProperlyOrNot() {
-		CleanStrike.main(null);
+		CleanStrikeTedious.main(null);
 	}
 }

@@ -1,6 +1,6 @@
 package com.example.demo.sahaj;
 
-public interface CarromBoardUtilis {
+public interface CarromBoardUtils {
 	public int strike(CarromBoard cleanStrikeBoard);
 	public int multiStike(CarromBoard cleanStrikeBoard);
 	public int redStrike(CarromBoard cleanStrikeBoard);

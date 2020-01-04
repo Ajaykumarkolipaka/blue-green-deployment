@@ -3,11 +3,16 @@ package com.example.demo.sahaj;
 import lombok.Data;
 
 @Data
-public class CarromBoard implements CarromBoardUtilis {
+public class CarromBoard implements CarromBoardUtils {
 	
 	private int black;
 	private int red;
-
+	
+	public CarromBoard() {
+		this.black=9;
+		this.red=1;
+	}
+	
 	public int strike(CarromBoard cleanStrikeBoard) {
 		if (cleanStrikeBoard.getBlack() == 0)
 			return 0;
