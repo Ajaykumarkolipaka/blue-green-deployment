@@ -2,6 +2,9 @@ package com.example.demo.sahaj;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+
+@Data
 public class Players implements PlayersUtils {
 	
 	private int player1Score;
@@ -22,38 +25,6 @@ public class Players implements PlayersUtils {
 		this.player2StrikeHistory = player2StrikeHistory;
 	}
 
-	public int getPlayer1Score() {
-		return player1Score;
-	}
-
-	public void setPlayer1Score(int player1Score) {
-		this.player1Score = player1Score;
-	}
-
-	public int getPlayer2Score() {
-		return player2Score;
-	}
-
-	public void setPlayer2Score(int player2Score) {
-		this.player2Score = player2Score;
-	}
-
-	public List<String> getPlayer1StrikeHistory() {
-		return player1StrikeHistory;
-	}
-
-	public void setPlayer1StrikeHistory(List<String> player1StrikeHistory) {
-		this.player1StrikeHistory = player1StrikeHistory;
-	}
-
-	public List<String> getPlayer2StrikeHistory() {
-		return player2StrikeHistory;
-	}
-
-	public void setPlayer2StrikeHistory(List<String> player2StrikeHistory) {
-		this.player2StrikeHistory = player2StrikeHistory;
-	}
-	
 	public boolean checkPlayerScore(Players players) {
 		
 		if(players.getPlayer1Score() >=5 || players.getPlayer2Score() >=5)

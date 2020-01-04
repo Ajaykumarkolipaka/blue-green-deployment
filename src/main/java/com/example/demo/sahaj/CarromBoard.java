@@ -1,35 +1,12 @@
 package com.example.demo.sahaj;
 
+import lombok.Data;
+
+@Data
 public class CarromBoard implements CarromBoardUtilis {
 	
 	private int black;
 	private int red;
-	
-	public CarromBoard() {
-		this.black=9;
-		this.red=1;
-	}
-	
-	public CarromBoard(int black, int red) {
-		this.black = black;
-		this.red = red;
-	}
-	
-	public int getBlack() {
-		return black;
-	}
-
-	public void setBlack(int black) {
-		this.black = black;
-	}
-
-	public int getRed() {
-		return red;
-	}
-
-	public void setRed(int red) {
-		this.red = red;
-	}
 
 	public int strike(CarromBoard cleanStrikeBoard) {
 		if (cleanStrikeBoard.getBlack() == 0)
