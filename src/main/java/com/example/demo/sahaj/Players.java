@@ -2,7 +2,7 @@ package com.example.demo.sahaj;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Players {
+public class Players implements PlayersUtils {
 	
 	private int player1Score;
 	private int player2Score;

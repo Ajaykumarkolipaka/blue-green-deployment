@@ -8,18 +8,18 @@ public class CleanStrike {
 		
 		Scanner s = new Scanner(System.in);
 		
-		Players players = new Players();
-		CarromBoard cleanStrikeBoard = new CarromBoard();
+		PlayersUtils players = new Players();
+		CarromBoardUtilis cleanStrikeBoard = new CarromBoard();
 		int playerDetails = 1;
 		int score = 0;
 		while(true) {
 			playerDetails = (playerDetails+1)%2;
 			
-			if((players.checkPlayerScore(players) && players.scoreDiff(players) >=3) || cleanStrikeBoard.isAllCoinsPocketed(cleanStrikeBoard)) {
-				System.out.println("player-1 moves: "+ players.getPlayer1StrikeHistory());
-				System.out.println("player-1 score: "+ players.getPlayer1Score());
-				System.out.println("player-2 moves: "+ players.getPlayer2StrikeHistory());
-				System.out.println("player-2 score: "+ players.getPlayer2Score());
+			if((players.checkPlayerScore((Players) players) && players.scoreDiff((Players) players) >=3) || cleanStrikeBoard.isAllCoinsPocketed((CarromBoard) cleanStrikeBoard)) {
+				System.out.println("player-1 moves: "+ ((Players) players).getPlayer1StrikeHistory());
+				System.out.println("player-1 score: "+ ((Players) players).getPlayer1Score());
+				System.out.println("player-2 moves: "+ ((Players) players).getPlayer2StrikeHistory());
+				System.out.println("player-2 score: "+ ((Players) players).getPlayer2Score());
 				break;
 			}
 			
@@ -39,31 +39,31 @@ public class CleanStrike {
 			}
 			
 			if(option==1) {
-				score = cleanStrikeBoard.strike(cleanStrikeBoard);
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "STRIKE", playerDetails+1);
+				score = cleanStrikeBoard.strike((CarromBoard) cleanStrikeBoard);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "STRIKE", playerDetails+1);
 			} else if (option == 2) {
-				score = cleanStrikeBoard.multiStike(cleanStrikeBoard);
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "MULTISTRIKE", playerDetails+1);
+				score = cleanStrikeBoard.multiStike((CarromBoard) cleanStrikeBoard);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "MULTISTRIKE", playerDetails+1);
 			} else if (option == 3) {
-				score = cleanStrikeBoard.redStrike(cleanStrikeBoard);
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "REDSTRIKE", playerDetails+1);
+				score = cleanStrikeBoard.redStrike((CarromBoard) cleanStrikeBoard);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "REDSTRIKE", playerDetails+1);
 			} else if (option == 4) {
-				score = cleanStrikeBoard.striker(cleanStrikeBoard);
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "STRIKERSTRIKE", playerDetails+1);
-				players.playerFoulCount(players, playerDetails +1);
+				score = cleanStrikeBoard.striker((CarromBoard) cleanStrikeBoard);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "STRIKERSTRIKE", playerDetails+1);
+				players.playerFoulCount((Players) players, playerDetails +1);
 			} else if (option == 5) {
-				score = cleanStrikeBoard.defunt(cleanStrikeBoard);
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "DEFUNCT", playerDetails+1);
-				players.playerFoulCount(players, playerDetails +1);
+				score = cleanStrikeBoard.defunt((CarromBoard) cleanStrikeBoard);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "DEFUNCT", playerDetails+1);
+				players.playerFoulCount((Players) players, playerDetails +1);
 			} else if (option == 6) {
 				score = cleanStrikeBoard.emptyStrike();
-				players.updatePlayerScore(playerDetails+1, score, players);
-				players.updatePlayerHistory(players, "NONE", playerDetails+1);
+				players.updatePlayerScore(playerDetails+1, score, (Players) players);
+				players.updatePlayerHistory((Players) players, "NONE", playerDetails+1);
 			}
 		}
 		s.close();

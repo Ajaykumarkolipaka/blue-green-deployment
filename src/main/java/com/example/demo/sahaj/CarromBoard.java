@@ -1,6 +1,6 @@
 package com.example.demo.sahaj;
 
-public class CarromBoard {
+public class CarromBoard implements CarromBoardUtilis {
 	
 	private int black;
 	private int red;
@@ -84,4 +84,5 @@ public class CarromBoard {
 		else 
 			return false;
 	}
+
 }

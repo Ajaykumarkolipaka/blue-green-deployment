@@ -7,6 +7,6 @@ public interface CarromBoardUtilis {
 	public int striker(CarromBoard cleanStrikeBoard);
 	public int defunt(CarromBoard cleanStrikeBoard);
 	public int emptyStrike();
-	public boolean isAllCoinsPocketed(CarromBoardUtilis cleanStrikeBoard);
+	public boolean isAllCoinsPocketed(CarromBoard cleanStrikeBoard);
 	
 }
