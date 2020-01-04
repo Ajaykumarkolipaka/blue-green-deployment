@@ -1,0 +1,10 @@
+applications:
+- name: config-service-blue
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: dev
+  services:
+  - config-server
+
+
+  
