@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.example.demo.cleanstrike.CleanStrikeMain;
+
 public class CleanStrikeMainTest {
 
 	@Test

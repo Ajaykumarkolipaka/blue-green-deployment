@@ -1,4 +1,4 @@
-package com.example.demo.sahaj;
+package com.example.demo.cleanstrike;
 import java.util.Scanner;
 
 public class CleanStrikeTedious {

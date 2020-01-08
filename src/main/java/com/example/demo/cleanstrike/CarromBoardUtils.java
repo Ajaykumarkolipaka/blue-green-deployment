@@ -1,4 +1,4 @@
-package com.example.demo.sahaj;
+package com.example.demo.cleanstrike;
 
 public interface CarromBoardUtils {
 	public int strike(CarromBoard cleanStrikeBoard);

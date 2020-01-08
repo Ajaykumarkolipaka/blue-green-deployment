@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.example.demo.cleanstrike.Players;
+
 public class PlayersTest {
 	
 	Players players = new Players();

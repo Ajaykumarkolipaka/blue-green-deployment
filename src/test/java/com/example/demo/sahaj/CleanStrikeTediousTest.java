@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.example.demo.cleanstrike.CleanStrikeTedious;
+
 public class CleanStrikeTediousTest {
 	
 	@Test
