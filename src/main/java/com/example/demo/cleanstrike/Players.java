@@ -7,10 +7,18 @@ import lombok.Data;
 @Data
 public class Players implements PlayersUtils {
 	
+	private List<Integer> playerScore;
+	private List<List<Integer>> playerStrikeHistory;
+	
+	
 	private int player1Score;
 	private int player2Score;
+	private int player3Score;
+	private int plaer4Score;
 	private List<String> player1StrikeHistory = new ArrayList<String>();
 	private List<String> player2StrikeHistory = new ArrayList<String>();
+	private List<String> player4StrikeHistory = new ArrayList<String>();
+	private List<String> player5StrikeHistory = new ArrayList<String>();
 	
 	public Players() {
 		
